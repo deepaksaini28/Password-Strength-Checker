@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Analyzer</h1>
+        <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Enter your password" autocomplete="off">
+            <button id="togglePassword" type="button">Show</button>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="strength-bar" id="strengthBar"></div>
+        </div>
+        
+        <div class="feedback-container">
+            <div class="strength-label">Strength: <span id="strengthLabel">None</span></div>
+            <div class="entropy-value">Entropy: <span id="entropyValue">0 bits</span></div>
+            
+            <div class="requirements">
+                <h3>Password Requirements:</h3>
+                <ul id="requirementsList">
+                    <li id="lengthReq">At least 8 characters</li>
+                    <li id="upperReq">Contains uppercase letters</li>
+                    <li id="lowerReq">Contains lowercase letters</li>
+                    <li id="numberReq">Contains numbers</li>
+                    <li id="specialReq">Contains special characters</li>
+                </ul>
+            </div>
+            
+            <div class="suggestions">
+                <h3>Suggestions:</h3>
+                <ul id="suggestionsList"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

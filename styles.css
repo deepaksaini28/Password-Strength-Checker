@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.password-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.strength-meter {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-bar.weak { background-color: #ff4444; }
+.strength-bar.medium { background-color: #ffa700; }
+.strength-bar.strong { background-color: #00c851; }
+
+.feedback-container {
+    color: #333;
+}
+
+.strength-label, .entropy-value {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.requirements, .suggestions {
+    margin-top: 1.5rem;
+}
+
+h3 {
+    color: #1a73e8;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+li::before {
+    content: "•";
+    color: #666;
+    position: absolute;
+    left: -1rem;
+}
+
+li.valid {
+    color: #00c851;
+}
+
+li.valid::before {
+    content: "✓";
+    color: #00c851;
+}
+
+li.invalid {
+    color: #ff4444;
+}
+
+li.invalid::before {
+    content: "×";
+    color: #ff4444;
+}
